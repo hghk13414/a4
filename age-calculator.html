@@ -92,13 +92,13 @@ z:السنة المدخلة
           /*شروط اخطاء لدخل*/
          if(x=='' | x>31 | x<1 | y=='' | y>12 | y<1 | z=='' | z>2023 | z<1900 | x!=parseInt(x) | y!=parseInt(y) | z!=parseInt(z))
           {
-          if(x=='' || x!=parseInt(x)) { redbo(document.getElementById("day2"));
+          if(x=='') { redbo(document.getElementById("day2"));
           redst(document.getElementById("day1"));
           window.day5.innerHTML = 'This filed is required'; 
    
          
         }
-        else if(x>31 | x<1 | (x>29 && y==2)){
+        else if(x>31 | x<1 | (x>29 && y==2) || x!=parseInt(x)){
           redbo(document.getElementById("day2"));
           redst(document.getElementById("day1"));
          window.day5.innerHTML = 'Must be a vaild day' ;
@@ -107,14 +107,14 @@ z:السنة المدخلة
         else  de1();
         
        
-          if(y=='' || y!=parseInt(y)) {
+          if(y=='' )) {
             redbo(document.getElementById("month2"));
           redst(document.getElementById("month1"));
             window.month5.innerHTML = 'This filed is required'  ;
           }
 
 
-        else if(y>12 | y<1)
+        else if(y>12 | y<1 || y!=parseInt(y))
         {
           redbo(document.getElementById("month2"));
           redst(document.getElementById("month1"));
@@ -122,11 +122,11 @@ z:السنة المدخلة
         }
         else de2();
        
-          if(z=='' | z!=parseInt(z)) { redbo(document.getElementById("year2"));
+          if(z=='') { redbo(document.getElementById("year2"));
           redst(document.getElementById("year1"));
             window.year5.innerHTML = 'This filed is required';
           }
-          else if(z>2023 | z<1900)
+          else if(z>2023 | z<1900  | z!=parseInt(z))
           {
             redbo(document.getElementById("year2"));
           redst(document.getElementById("year1"));
